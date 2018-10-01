@@ -1,0 +1,26 @@
+****
+개요
+****
+Gamebase JavaScript SDK를 프로젝트에 적용하고,
+기본적으로 제공되는 Guest 인증을 하는 방법을 살펴보겠습니다.
+
+
+학습할 내용
+============
+
+* Gamebase JavaScript 초기 설정
+* Gamebase JavaScript 초기화
+* Gamebase Guest 인증
+
+준비물
+======
+
+* TOAST 계정 (프로젝트가 생성가능한 계정)
+* TOAST Gamebase 상품 활성화
+* TOAST Gamebase Console WEB 설정
+* 익숙한 편집기
+
+소스 코드
+==========
+* https://github.com/nhnent/hands-on-labs/gamebase-javascript/auth/guest
+
