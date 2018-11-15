@@ -16,4 +16,4 @@ Codelab을 통해서 배운 내용을 정리합니다.
 =======
 
 * TOAST Console에서 Provider의 정보를 입력한 후, 다른 Provider 로그인도 시도해보세요.
-    * [TOAST Gamebase Guide](http://docs.toast.com/ko/Game/Gamebase/ko/oper-app/#authentication-information)를 참고
+    * [TOAST Gamebase Guide](http://docs.toast.com/ko/Game/Gamebase/ko/oper-app/#authentication-information) 참고
