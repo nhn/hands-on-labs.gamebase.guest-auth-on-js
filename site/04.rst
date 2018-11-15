@@ -11,16 +11,17 @@ Login API
 .. code-block:: javascript
     :linenos:
 
-    // 초기화 API
-    toast.Gamebase.login(idp, (authToken, error) => { ... })
+    // 로그인 API
+    toast.Gamebase.login(providerName, (authToken, error) => { ... });
 
 
-IdP(Identity Provider)에는 다음의 값들이 올 수 있습니다. (대소문자 구분 없음)
+providerName Parameter
+----------------------
+ProviderName에는 다음의 값들이 올 수 있습니다. (대소문자 구분 없음)
 
 - guest
 - google
 - facebook
-- twitter
 - line
 - naver
 - payco
@@ -29,9 +30,11 @@ IdP(Identity Provider)에는 다음의 값들이 올 수 있습니다. (대소�
 이번 CodeLab에서는 guest 인증을 시도해보겠습니다.
 
 .. NOTE:: 
-    다른 IdP들의 경우, 각 IdP 개발자 페이지에서 "애플리케이션" 생성 및 clientId/Secret 등을 발급받는 사전 작업이 필요합니다.
+    다른 Provider의 경우, 각 Provider 개발자 페이지에서 "애플리케이션" 생성 및 clientId/Secret 등을 발급받는 사전 작업이 필요합니다.
 
-    그 후, 발급받은 IdP 정보들을 TOAST Gamebase Console에 입력하는 과정이 필요합니다. (초기화시 입력한 값들을 launchingInfo 데이터로 받아온 후, 인증에 사용합니다.)
+    그 후, 발급받은 Provider 정보들을 TOAST Gamebase Console에 입력하는 과정이 필요합니다. 
+    
+    (초기화시 입력한 값들을 launchingInfo 데이터로 받아온 후, 인증에 사용합니다.)
 
 
 
@@ -41,7 +44,8 @@ Guest 인증을 위해서는 위의 *toast.Gamebase.login()* API를 호출하면
 AuthToken
 ---------
 *toast.Gamebase.login()* API 호출 이후, 받게되는 콜백의 첫번째 파라미터는 AuthToken 정보를 담고 있습니다.
-인증하고자하는 IdP의 AccessToken 정보 및 유저 프로필 정보등을 담고 있습니다.
+
+인증하고자하는 Provider의 AccessToken 정보 및 유저 프로필 정보등을 담고 있습니다.
 
 AuthToken의 구조는 다음과 같습니다.
 
@@ -57,7 +61,7 @@ AuthToken의 구조는 다음과 같습니다.
             userId: userId, // Gamebase UserId 입니다.
             regDate: regDate, // number, 가입 날짜입니다. epoch time입니다.
             lastLoginDate: lastLoginDate, // number, 최근 로그인 날짜입니다. epoch time입니다.
-            authList: authList, // Array - 연동된 IDP 리스트를 나타냅니다.
+            authList: authList, // Array - 연동된 Provider 리스트를 나타냅니다.
         },
         banInfo: {
             userId: userId, // string - Gamebase UserId 입니다.
@@ -67,12 +71,12 @@ AuthToken의 구조는 다음과 같습니다.
             endDate: endDate, // number, 이용정지 종료 날짜입니다. epoch time입니다.
             csInfo: csInfo, // string - cs email 정보입니다.
             csUrl: csUrl, // string - cs url 정보입니다.
-        }
+        },
     }
 
 
 Example
---------
+-------
 
 게임베이스 로그인에 대한 예시 코드는 다음과 같습니다.
 
@@ -117,8 +121,8 @@ Example
         gamebaseLogin('guest');
     });
     
-    function gamebaseLogin(idP) {
-        toast.Gamebase.login(idP, function(authToken, error) {
+    function gamebaseLogin(providerName) {
+        toast.Gamebase.login(providerName, function(authToken, error) {
             if (error != null) {
                 addTextToTextArea('Login Failed.');
                 return;
@@ -126,7 +130,7 @@ Example
 
             var userId = authToken.member.userId;
             addTextToTextArea(`Login Success: userId(${userId})`);
-        };
+        });
     }
 
     function gamebaseInitialize() {
@@ -179,6 +183,7 @@ Example
 Logout API
 ==========
 로그인 이후, 다음의 API를 통하여 로그아웃을 시도 할 수 있습니다. 
+
 Guest 로그아웃의 경우 단순 Gamebase 로그아웃을 의미하며, Guest로 재로그인시 동일한 UserID로 로그인을 할 수 있습니다.
 
 만약, 브라우저 Cookie를 삭제한다면, Guest 계정은 유실 될 수 있습니다.
@@ -186,7 +191,9 @@ Guest 로그아웃의 경우 단순 Gamebase 로그아웃을 의미하며, Guest
 .. code-block:: javascript
     :linenos:
 
-    // 초기화 API
+    // 로그아웃 API
     toast.Gamebase.logout((error) => { ... })
 
+.. raw:: html
 
+    </div>
