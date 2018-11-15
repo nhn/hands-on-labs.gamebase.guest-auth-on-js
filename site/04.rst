@@ -11,7 +11,7 @@ Login API
 .. code-block:: javascript
     :linenos:
 
-    // 초기화 API
+    // 로그인 API
     toast.Gamebase.login(idp, (authToken, error) => { ... })
 
 
@@ -20,7 +20,6 @@ IdP(Identity Provider)에는 다음의 값들이 올 수 있습니다. (대소�
 - guest
 - google
 - facebook
-- twitter
 - line
 - naver
 - payco
@@ -126,7 +125,7 @@ Example
 
             var userId = authToken.member.userId;
             addTextToTextArea(`Login Success: userId(${userId})`);
-        };
+        });
     }
 
     function gamebaseInitialize() {
@@ -186,7 +185,7 @@ Guest 로그아웃의 경우 단순 Gamebase 로그아웃을 의미하며, Guest
 .. code-block:: javascript
     :linenos:
 
-    // 초기화 API
+    // 로그아웃 API
     toast.Gamebase.logout((error) => { ... })
 
 
