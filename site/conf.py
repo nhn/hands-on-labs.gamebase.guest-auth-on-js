@@ -59,7 +59,7 @@ master_doc = 'index'
 # General information about the project.
 project = 'Gamebase JavaScript Login with Guest'
 copyright = 'NHN Entertainment'
-author = 'panki.park'
+author = ''
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -355,3 +355,5 @@ texinfo_documents = [
 #
 # texinfo_no_detailmenu = False
 
+def setup(app):
+    app.add_stylesheet('css/custom.css')
