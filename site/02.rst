@@ -6,11 +6,9 @@ Setup
 Download the SDK
 ================
 
-TOAST에서 JavaScript SDK를 다운로드 받습니다.
+아래 링크에서 JavaScript SDK를 다운로드 받습니다.
 
-Game > Gamebase > JavaScript SDK
-
-* 다운로드: https://docs.toast.com/ko/Download/
+* 다운로드 : http://forward.nhnent.com/hands-on-labs/gamebase.guest-auth-on-js/_static/files/gamebase-javascript-sdk.zip
 
 
 
