@@ -15,8 +15,5 @@ Codelab을 통해서 배운 내용을 정리합니다.
 다음 단계
 =======
 
-* TOAST Console에서 Provider의 정보를 입력한 후, 다른 Provider 로그인도 시도해보세요.
-    * TOAST GamebaseGuide_ 참고
+* [앱 운영하기] 서비스에 "점검", "공지사항" 등을 설정하여 처리하는 방법을 다룹니다.
 
-
-.. _GamebaseGuide: http://docs.toast.com/ko/Game/Gamebase/ko/oper-app/#authentication-information

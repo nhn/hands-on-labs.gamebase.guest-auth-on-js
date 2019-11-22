@@ -19,3 +19,8 @@ Gamebase JavaScript SDK를 프로젝트에 적용하고,
 * TOAST Gamebase 상품 활성화
 * TOAST Gamebase Console WEB 설정
 * 익숙한 편집기
+
+소스 코드
+==========
+* https://github.com/nhnent/hands-on-labs/gamebase-javascript/auth/guest
+

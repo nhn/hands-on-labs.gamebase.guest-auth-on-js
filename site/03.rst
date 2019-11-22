@@ -23,7 +23,6 @@ AppId는 ``Gamebse > App > ID`` 에서 다음과 같이 확인하실 수 있습�
 ClientVersion
 -------------
 ClientVersion은 ``Gamebse > Client > WEB`` 에서 다음과 같이 확인하실 수 있습니다.
-
 초기 프로젝트 생성 후에는 클라이언트들이 등록되어있지 않으므로, 스토어 및 서비스 상태를 고려하여 클라이언트를 등록해주어야합니다.
 
 아래 스크린샷에서는 ClietVersion이 "*1.0.0*" 및 "*2.0.0*" 으로 등록된 것을 확인 할 수 있습니다.
@@ -35,7 +34,6 @@ Initialization API
 ==================
 
 두 필수값(AppId, ClientVersion)을 확인했다면, 해당 값을 이용해 Gamebase 초기화를 진행합니다.
-
 Gamebase 인스턴스는 **window.toast** 하위로 생성이 됩니다. 그러므로 다음 API를 호출하여 초기화를 진행 할 수 있습니다.
 
 .. code-block:: javascript
@@ -73,7 +71,6 @@ LaunchingInfo
 위의 *toast.Gamebase.initialize* API의 콜백으로 오는 값 중, 첫번째 파라미터는 게임베이스의 상태를 알려주는 런칭정보입니다.
 
 해당 값을 통해서, 현재 애플리케이션이 이용가능한 상태인지 아닌지를 알 수 있을 뿐만 아니라, 연동되어있는 타 서비스들에 대한 정보값도 받을 수 있습니다.
-
 뿐만 아니라, 이용가능 상태 등에 따라서, Gamebase UI에 필요한 데이터가 전달되기도 합니다.
 
 해당 LaunchingInfo의 구조는 다음과 같습니다.
@@ -98,7 +95,7 @@ LaunchingInfo
                     punishRuleUrl: punishRuleUrl, // string - Console에 입력한 이용정지 규칙 URL
                     personalInfoCollectionUrl: personalInfoCollectionUrl, // string - Console에 입력한 개인정보 수집 동의 URL
                 },
-                idP: [ ... ], // Array - Console에 입력한 각 Provider에 대한 정보 (clientId, clientSecret, additionalInfo 등)
+                idP: [ ... ], // Array - Console에 입력한 각 IdP에 대한 정보 (clientId, clientSecret, additionalInfo 등)
                 install: {
                     url: url // string - Console에 입력한 설치 URL
                 }
@@ -123,7 +120,6 @@ LaunchingInfo
 LaunchingStatusCode
 -------------------
 LaunchingStatusCode 값은 아래 URL을 참조합니다.
-
 http://docs.toast.com/ko/Game/Gamebase/ko/aos-initialization/#launching-status-code
 
 
@@ -186,7 +182,7 @@ Example
             clientVersion: clientVersion, // TOAST Console Gamebase App Client Version
         };  
 
-        // 게임베이스 초기화
+        게임베이스 초기화
         toast.Gamebase.initialize(gamebaseConfiguration, function (launchingInfo, error) {
             if (error) {
                 // 초기화에 실패하면 Gamebase SDK를 이용할 수 없습니다.
@@ -222,7 +218,6 @@ Example
 
 .. code-block:: html
     :linenos:
-
     #gbInitBtn {
       width:200px;
       height:55px;
@@ -247,6 +242,3 @@ Example
       font-size:14px;
     }
 
-.. raw:: html
-
-    </div>
