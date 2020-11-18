@@ -92,7 +92,7 @@ Example
     <!DOCTYPE html>
     <html>
     <head>
-      <script src="/assets/lib/gamebase.min.js"></script>
+      <script src="/assets/lib/gamebase.js"></script>
     </head>
     <body>
       <button id="gbInitBtn">Gamebase 초기화</button>

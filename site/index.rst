@@ -5,7 +5,7 @@ Gamebase JavaScript Guest 인증하기
 * 카테고리: API
 * 레벨: 초급
 * 시간: 15분
-* 업데이트: 2019.11.21
+* 업데이트: 2020.11.17
 
 
 .. toctree:: 
